@@ -61,7 +61,7 @@ const MainMenu = (props: Props) => {
                 className={
                   "textColor font-[500] relative w-[207.43px] inline-block"
                 }
-                aria-label={word}
+                // aria-label={word}
               >
                 {word}
                 {/* {word ? word : "바이럴"} */}
