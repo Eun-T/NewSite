@@ -31,7 +31,7 @@ const SmartPlace = (props: SmartPlaceProps) => {
           스마트플레이스
         </h2>
         <p className="section-text">
-          위치 및 매장 홍보에 효과적인 네이버 지도 플레이스 마케팅입니다.
+          위치 및 매장 홍보에 효과적인 <span className="font-[500]">네이버 지도 플레이스 마케팅</span>입니다.
           <br />
           어뷰징이나 편법 없이 네이버 플레이스를 최적화 시켜 노출과 전환이 잘
           되게 만듭니다.

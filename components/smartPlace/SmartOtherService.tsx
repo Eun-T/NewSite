@@ -36,18 +36,20 @@ const others = [
 
 const SmartOtherService = (props: Props) => {
   return (
-    <div className="relative w-full bg-[#0b2926] py-[80px] flex justify-center">
-      <div className="max-w-[1240px]">
-        <h3 className="text-white text-[32px] text-center font-[600] mb-[50px]">
-          그 외의
+    //relative w-full bg-[#0b2926] py-[80px] flex justify-center
+    //text-white text-[32px] text-center font-[600] mb-[50px]
+    <section className="section bg-[#0b2926]">
+      <div className="container">
+        <h2 className="section-title text-white text-center">
+          그 외
           <br />
           <span>다양한 서비스</span>
-        </h3>
+        </h2>
         <div className="flex flex-row flex-wrap gap-[20px] justify-center">
           {others.map((other) => (
             <div
               id={other.id}
-              className="flex flex-row  w-[48%] h-[200px] bg-[#f4f5f7] rounded-[8px] p-[20px]"
+              className="flex flex-row w-[95%]  h-[120px] bg-[#f4f5f7] rounded-[8px] p-[20px]"
             >
               <div className="relative w-[50%] h-full">
                 <Image
@@ -64,7 +66,7 @@ const SmartOtherService = (props: Props) => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,8 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  assetPrefix: '.',
+  // important: true,
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -45,12 +47,12 @@ const config: Config = {
           "100%": { transform: "translateY(0)" },
         },
         imageUp: {
-          "0%": { transform: "translateY(0px)" },
-          "100%": { transform: "translateY(-20px)" },
+          "0%,100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
         },
         imageDown: {
-          "0%": { transform: "translateY(-20px)" },
-          "100%": { transform: "translateY(0px)" },
+          "0%,100%": { transform: "translateY(-20px) translateX(0px) rotate(135deg)" },
+          "50%": { transform: "translateY(0px) translateX(20px) rotate(135deg)" },
         },
         barUp: {
           "0%": { opacity: ".3" },

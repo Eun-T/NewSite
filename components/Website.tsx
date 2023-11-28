@@ -16,7 +16,7 @@ const Website = (props: WebsiteProps) => {
           되게 만듭니다.
         </p>
         <div className="w-full flex flex-row gap-[40px] justify-between flex-wrap relative">
-          <img src="/images/food.png" alt="f" className="w-[47.5%] aspect-square"/>
+          <img src="/images/site.png" alt="f" className="w-[1280px] aspect-[1280/740]"/>
           <img src="/images/food.png" alt="f" className="w-[47.5%] aspect-square"/>
           <img src="/images/food.png" alt="f" className="w-[47.5%] aspect-square"/>
           <img src="/images/food.png" alt="f" className="w-[47.5%] aspect-square"/>
