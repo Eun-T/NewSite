@@ -10,8 +10,22 @@
   -ms-overflow-style: none;
 } */
 
+[data-aos="new-animation"] {
+  rotate: 0;
+  transition-property: transform, rotate;
+
+  &.aos-animate {
+    rotate: 180deg;
+  }
+
+}
+
 body {
   background-color: #fff;
+}
+
+#linebar {
+  animation-fill-mode: forwards;
 }
 
 .boxShd {
@@ -46,7 +60,7 @@ body {
   width: 100%;
   background-color: white;
   border-left: 2px solid #1bbc1b;
-  animation: animate 2.5s steps(100) infinite;
+  animation: animate 2.5s steps(9) infinite;
 }
 
 @keyframes animate {
@@ -57,15 +71,6 @@ body {
     left: 0%;
   }
 }
-
-/* #box {
-  background: rgb(131, 246, 149);
-  background: linear-gradient(
-    225deg,
-    rgba(131, 246, 149, 1) 0%,
-    rgba(34, 197, 94, 1) 100%
-  );
-} */
 
 @layer components {
   .section {
@@ -80,6 +85,9 @@ body {
   .section-text {
     @apply text-[14px] m:text-[16px] l:text-[18px] font-[400] mb-[20px];
   }
+  .section-paragraph {
+    @apply py-[75px]
+  }
 }
 
 #progress {
@@ -90,13 +98,172 @@ body {
   border-radius: 0 100% 100% 0/50%;
 }
 
-#blogslider::-webkit-scrollbar {
+/* #blogslider::-webkit-scrollbar {
   display: none;
 }
 
 #blogslider {
   -ms-overflow-style: none;
+} */
+
+
+/* codepen */
+
+.scroller {
+  max-width: 600px;
 }
+
+.scroller__inner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* general styles */
+
+:root {
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-primary-100: hsl(205, 15%, 58%);
+  --clr-primary-400: hsl(215, 25%, 27%);
+  --clr-primary-800: hsl(217, 33%, 17%);
+  --clr-primary-900: hsl(218, 33%, 9%);
+}
+
+
+
+
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 1rem;
+  background: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
+}
+
+/* for testing purposed to ensure the animation lined up correctly */
+.test {
+  background: red !important;
+}
+
+
+
+
+
+
+/* sliders 2*/
+
+#blogslider {
+  height: 547px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+#bsc {
+  display: flex;
+  gap: 8px;
+  width: calc(410px * 18);
+  animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+#bsc div {
+  position: relative;
+  top: 1px;
+  height: 547px;
+  width: 410px;
+  display: flex;
+  align-items: center;
+  padding: 24px 48px 0px;
+  background-color: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* #bsc {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+#bsc::-webkit-scrollbar {
+  display: none;
+}
+
+#bsc div {
+  scroll-snap-align: start;
+  border-radius: 30px;
+  min-height: 200px;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
 
 .swiperslide {
   width: 680px;

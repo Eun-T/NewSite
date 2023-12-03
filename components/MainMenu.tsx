@@ -20,7 +20,7 @@ const MainMenu = (props: Props) => {
   const words = ["바이럴", "브랜드", "블로그", "SNS!!"];
 
   const wordLoading = () => {
-    console.log("word: ",word,"index: ",index)
+
     setIndex((prevIndex) => (prevIndex + 1) % words.length);
     setWord(words[index]);
   };

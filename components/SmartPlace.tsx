@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { SwiperCore } from "swiper";
 import {
@@ -17,26 +17,43 @@ import "swiper/css/autoplay";
 import SmartMap from "./smartPlace/SmartMap";
 import SmartManage from "./smartPlace/SmartManage";
 import SmartOtherService from "./smartPlace/SmartOtherService";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 type SmartPlaceProps = {};
 
 const SmartPlace = (props: SmartPlaceProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <section className="section">
       <div className="container">
-        <h2 className="section-title">
-          <span className="text-green-500 block s:inline">네이버 </span>
-          스마트플레이스
-        </h2>
-        <p className="section-text">
-          위치 및 매장 홍보에 효과적인 <span className="font-[500]">네이버 지도 플레이스 마케팅</span>입니다.
-          <br />
-          어뷰징이나 편법 없이 네이버 플레이스를 최적화 시켜 노출과 전환이 잘
-          되게 만듭니다.
-        </p>
-        <div className=" flex justify-center">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-delay="60"
+          data-aos-once="true"
+          data-aos-easing="ease-in-out"
+        >
+          <h2 className="section-title">
+            <span className="text-green-500 block s:inline">네이버 </span>
+            스마트플레이스
+          </h2>
+          <p className="section-text text-[21px]">
+            네이버에서 제공하는 서비스로는 가게와 업체의 상세한 정보를 확인할 수
+            있습니다.
+            <br />
+            위치, 사진, 휴무일 등 다양한 정보를 기입하여 이용자에게 제공합니다.
+            <br />
+            국내에서 매우 널리 사용되며, 약 200만 개의 플레이스 업체가 등록되어
+            있습니다.
+          </p>
+        </div>
+        <div className="flex justify-center">
           <div className="w-full mx-auto">
             <SmartMap />
             <SmartManage />

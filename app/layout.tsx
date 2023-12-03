@@ -12,24 +12,6 @@ const pretend = localFont({
   variable: '--font-pretend'
 })
 
-// export const myFont = localFont({
-//   src: [
-//     {
-//       path: './fonts/NEXONLv1GothicLight.ttf',
-//       weight: '300',
-//     },
-//     {
-//       path: './fonts/NEXONLv1GothicRegular.ttf',
-//       weight: '400',
-//     },
-//     {
-//       path: './fonts/NEXONLv1GothicBold.ttf',
-//       weight: '700',
-//     },
-//   ],
-//   variable: '--font-nexon'
-// })
-
 // export const metadata: Metadata = {
 //   title: 'Acme',
 // }

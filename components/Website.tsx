@@ -1,25 +1,34 @@
+import Image from "next/image";
 import React from "react";
+import imac from "../public/images/imac.png";
 
 type WebsiteProps = {};
 
 const Website = (props: WebsiteProps) => {
   return (
-    <section className="relative w-full px-[4%] py-[50px]">
-      <div className="max-w-[1240px] mx-auto w-full relative">
-        <h2 className="text-[40px] font-[600] mb-[15px]">
+    <section className="section">
+      <div className="container">
+        <h2 className="section-title">
           <span className="text-[#ffa900]">홈페이지</span> 제작
         </h2>
-        <p className="text-[18px] text-gray-400 font-[600] mb-[20px]">
-          위치 및 매장 홍보에 효과적인 네이버 지도 플레이스 마케팅입니다.
-          <br />
-          어뷰징이나 편법 없이 네이버 플레이스를 최적화 시켜 노출과 전환이 잘
-          되게 만듭니다.
+        <p className="section-text text-[21px]">
+        우리의 수년 간의 풍부한 경험과 탄탄한 기획 그리고 감각적인 디자인을 바탕으로<br/>만들어 낸 고객님의 소중한 홈페이지는 최신 기술 스택을 활용하여 제작되었습니다.<br/> 기존의 웹사이트보다 더 현대적이며 반응 속도가 뛰어난 사이트를 선보이고 있습니다.
+        {/* 우리만의 특별한 전문성과 노하우를 담아 고객님의 비즈니스에 최상의 디지털 솔루션을 제공합니다. */}
+          {/* 24년 이상의 풍부한 경험과 탄탄한 기획, 감각적인 디자인으로 만들어 낸,
+          이프론트의 땀방울로 일궈낸 고객사의 소중한 자산, 주요 제작실적을 한눈에 보여드립니다. */}
         </p>
-        <div className="w-full flex flex-row gap-[40px] justify-between flex-wrap relative">
-          <img src="/images/site.png" alt="f" className="w-[1280px] aspect-[1280/740]"/>
-          <img src="/images/food.png" alt="f" className="w-[47.5%] aspect-square"/>
-          <img src="/images/food.png" alt="f" className="w-[47.5%] aspect-square"/>
-          <img src="/images/food.png" alt="f" className="w-[47.5%] aspect-square"/>
+        <div className="">
+          <ul>
+            <li className="relative w-[630px] cursor-pointer ">
+              <div className="relative w-full aspect-[523/565]">
+                <Image src={imac} alt="sdf" fill objectFit="cover"/>
+              </div>
+              <div className="flex justify-between mt-[20px] px-[30px]">
+                <h5 className="relative uppercase font-[200] text-[14px] tracking-[.25em] before:border-b-[1px] before:border-black before:content-[''] before:bottom-[-5px] before:left-[50%] before:-translate-x-[50%] before:absolute before:w-[140%]">Law Days</h5>
+                <p className="font-[300] tracking-[.1em] text-[14px]">법률사무소 사이트</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

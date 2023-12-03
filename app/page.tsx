@@ -10,6 +10,10 @@ import SmartOtherService from "@/components/smartPlace/SmartOtherService";
 import PowerLink from "@/components/PowerLink";
 import BlogProcess from "@/components/blog/BlogProcess";
 import BlogSlider from "@/components/blog/BlogSlider";
+import SmartPrice from "@/components/smartPlace/SmartPrice";
+import SmartExplain from "@/components/smartPlace/SmartExplain";
+import PowerExplain from "@/components/powerLink/PowerExplain";
+import PowerLink2 from "@/components/powerLink/PowerLink2";
 
 export default function Home() {
   return (
@@ -17,17 +21,23 @@ export default function Home() {
       <MainMenu />
       {/* <Merit /> */}
       <SmartPlace />
-      <SmartOtherService />
+      <SmartExplain />
+      <SmartPrice />
+      {/* <SmartOtherService /> */}
+      <LineBar />
       <PowerLink />
+      <PowerExplain />
+      <PowerLink2 />
+      <LineBar />
       <>
         <Blog />
         <BlogSlider />
         <BlogProcess />
       </>
       <LineBar />
-      <Sns />
+      {/* <Sns /> */}
       <Website />
-      <Youtube />
+      {/* <Youtube /> */}
     </main>
   );
 }
