@@ -19,9 +19,9 @@ const Website = (props: WebsiteProps) => {
         </p>
         <div className="">
           <ul>
-            <li className="relative w-[630px] cursor-pointer ">
-              <div className="relative w-full aspect-[523/565]">
-                <Image src={imac} alt="sdf" fill objectFit="cover"/>
+            <li className="relative w-[630px] cursor-pointer">
+              <div className="relative w-full aspect-[523/565] overflow-hidden">
+                <Image src={imac} alt="sdf" fill objectFit="cover" className="hover:scale-110 transiton duration-[800ms] ease-in-out"/>
               </div>
               <div className="flex justify-between mt-[20px] px-[30px]">
                 <h5 className="relative uppercase font-[200] text-[14px] tracking-[.25em] before:border-b-[1px] before:border-black before:content-[''] before:bottom-[-5px] before:left-[50%] before:-translate-x-[50%] before:absolute before:w-[140%]">Law Days</h5>
