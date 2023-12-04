@@ -25,7 +25,7 @@ const Blog = (props: SnsProps) => {
         <div className="flex justify-center">
           <div className="w-full mx-auto">
             <BlogIntoduce />
-            <BlogCounting />
+{/*             <BlogCounting /> */}
           </div>
         </div>
       </div>
