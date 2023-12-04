@@ -50,7 +50,7 @@ const PowerLink2 = (props: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative bg-[url('/images/computer.jpg')] bg-no-repeat bg-cover before:content-[''] before:bg-black before:absolute before:inset-0  before:bg-bottom before:bg-no-repeat before:bg-cover before:opacity-30 section mb-[150px]">
+    <section className="relative bg-[url('/images/computer.jpg')] bg-fixed bg-no-repeat bg-cover before:content-[''] before:bg-black before:absolute before:inset-0  before:bg-bottom before:bg-no-repeat before:bg-cover before:opacity-30 section mb-[150px]">
       <div className="container relative">
         {/* <h3 className="text-white text-center text-[40px] font-[500] mb-[0px]">검색광고 대표 상품 소개</h3> */}
         <h4 className="text-white text-center text-[40px] font-[500] mb-[40px]">
