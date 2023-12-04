@@ -32,7 +32,8 @@ export default function Home() {
       <>
         <Blog />
         <BlogSlider />
-        <BlogProcess />
+      <BlogCounting />
+        {/* <BlogProcess /> */}
       </>
       <LineBar />
       {/* <Sns /> */}
