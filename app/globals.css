@@ -214,7 +214,7 @@ body {
   display: flex;
   gap: 8px;
   width: calc(410px * 18);
-  animation: scroll 40s linear infinite;
+  animation: scroll 30s linear infinite;
 }
 
 @keyframes scroll {
@@ -223,7 +223,7 @@ body {
   }
 
   100% {
-    transform: translateX(calc(-250px * 9));
+    transform: translateX(calc(-410px * 9));
   }
 }
 
