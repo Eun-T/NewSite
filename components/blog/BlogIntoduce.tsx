@@ -17,10 +17,10 @@ const BlogIntoduce = (props: Props) => {
       </div>
       <div className="text-[16px] s:text-[18px] l:text-[36px] h-auto m:w-[33.3%] font-[300] m:order-3">
         <span className="block mb-[20px] text-[24px] textColor font-[500]">
-          플레이스 = 가게의 얼굴
+          자영업, 전문직을 위한
         </span>
-        <span className="block">고객의 시선을</span>
-        사로잡는 <span className="font-[700]">고급 설정</span>
+        <span className="block">나만의 브랜드 블로그</span>
+        <span className="font-[700]">간편한 대행 서비스</span>
       </div>
     </div>
   );
