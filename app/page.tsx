@@ -14,6 +14,10 @@ import SmartPrice from "@/components/smartPlace/SmartPrice";
 import SmartExplain from "@/components/smartPlace/SmartExplain";
 import PowerExplain from "@/components/powerLink/PowerExplain";
 import PowerLink2 from "@/components/powerLink/PowerLink2";
+import BlogCounting from "@/components/blog/BlogCounting";
+import BlogCheck from "@/components/blog/BlogCheck";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -32,12 +36,15 @@ export default function Home() {
       <>
         <Blog />
         <BlogSlider />
-      <BlogCounting />
+        <BlogCounting />
+        <BlogCheck />
         {/* <BlogProcess /> */}
       </>
       <LineBar />
       {/* <Sns /> */}
       <Website />
+      <Contact />
+      <Footer />
       {/* <Youtube /> */}
     </main>
   );

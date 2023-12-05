@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`${pretend.className} ${inter.className}`}>
-        <NavBar />
+        {/* <NavBar /> */}
         {children}
       </body>
     </html>

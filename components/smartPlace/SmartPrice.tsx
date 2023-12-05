@@ -53,15 +53,15 @@ const SmartPrice = (props: Props) => {
           </h4>
         </div>
 
-        <h2 className="mb-[70px] leading-[1.2] text-[40px] text-white text-center">
+        <h2 className="mb-[70px] leading-[1.2] text-[28px] x:text-[32px] m:text-[36px] l:text-[40px] text-white text-center">
           <>합리적인 가격</>과 <>무료 혜택</>들을 <strong>한번에!</strong>
         </h2>
 
-        <div className="flex items-center justify-center h-[584px] gap-[10px]">
-          <div className="w-[40%] h-full flex justify-end flex-col gap-[10px]">
+        <div className="flex flex-col l:flex-row items-center justify-center l:h-[584px] gap-[10px]">
+          <div className="w-full x:w-[80%] l:w-[40%] h-full flex justify-end flex-col gap-[10px]">
             {lists.map((list) => (
               <div
-              id={list.id}
+                id={list.id}
                 className="w-full h-[160px] flex bg-white rounded-[20px] items-center justify-between px-[37px] gap-[20px]"
                 data-aos="fade-right"
                 data-aos-duration="600"
@@ -74,17 +74,26 @@ const SmartPrice = (props: Props) => {
                   alt="sdf"
                   className="w-[100px] h-[100px]"
                 /> */}
-                <Image src={list.img} alt={list.alt} width={100} height={100}/>
+                <div className="relative w-[65px] s:w-[70px] x:w-[80px] l:w-[100px] aspect-square">
+                  <Image
+                    src={list.img}
+                    alt={list.alt}
+                    fill
+                    objectFit="cover"
+                  />
+                </div>
                 <div>
-                  <p className="text-[30px] text-end">{list.title}</p>
-                  <p className="text-[40px] font-[700] text-end">{list.price}</p>
+                  <p className="text-[20px] s:text-[22px] x:text-[26px] l:text-[30px] text-end">{list.title}</p>
+                  <p className="text-[28px] s:text-[30px] x:text-[36px] l:text-[40px] font-[700] text-end">
+                    {list.price}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
 
           <div
-            className="w-[35%]"
+            className="w-full x:w-[80%] l:w-[35%]"
             data-aos="fade-left"
             data-aos-duration="600"
             data-aos-delay="60"

@@ -7,9 +7,9 @@ type Props = {};
 
 const SmartMap = (props: Props) => {
   return (
-    <div className="relative flex flex-col m:flex-row justify-between gap-[20px] items-center section-paragraph">
+    <div className="relative flex flex-col m:flex-row justify-between gap-[50px] items-center section-paragraph">
       <div
-        className="relative m:right-[15px] w-[80%] m:w-[66.7%] max-w-[800px] aspect-[1414/1072] mb-[10px] s:mb-[15px] m:mb-0 m:order-2"
+        className="relative m:right-[15px] w-[80%] m:w-[66.7%] max-w-[750px] aspect-[1414/1072] mb-[10px] s:mb-[15px] m:mb-0 m:order-2"
         data-aos="fade-right"
         data-aos-duration="600"
         data-aos-delay="60"
@@ -29,7 +29,7 @@ const SmartMap = (props: Props) => {
       </div>
       {/* <div className="w-[33.3%] text-gray-400 font-[600] text-[21px] break-keep leading-relaxed"> */}
       <div
-        className="text-[16px] s:text-[18px] l:text-[36px] h-full m:w-[33.3%] font-[300] m:order-3"
+        className="text-[22px] x:text-[24px] m:text-[29px] l:text-[36px] h-full m:w-[33.3%] font-[300] m:order-3 text-center m:text-start"
         data-aos="fade-left"
         data-aos-duration="600"
         data-aos-delay="60"

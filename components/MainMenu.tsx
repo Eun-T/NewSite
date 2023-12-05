@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import smartplace from "../public/images/smartplace.png";
+import under from "../public/images/under.png";
 import backgroundImage from "../public/images/bg-image5.png";
 import SimpleBox from "./SimpleBox";
 import { HiArrowDown } from "react-icons/hi";
@@ -40,26 +40,26 @@ const MainMenu = (props: Props) => {
       <div id="box" className="relative container h-[100vh]">
         <div className="relative top-[30%] bg-transparent" id="maintext">
           <div className="flex gap-3 mb-5">
-            <button className="bgColor w-[150px] py-[13px] relative text-white text-center font-[600] block boxShd ">
+            <button className="bgColor w-[105px] s:w-[120px] m:w-[130px] l:w-[150px] py-[13px] text-[12px] s:text-[14px] m:text-[15px] l:text-[16px] relative text-white text-center font-[600] block boxShd">
               # 대면 상담 YES
             </button>
-            <button className="bgColor w-[150px] py-[13px] relative text-white text-center font-[600] block boxShd">
+            <button className="bgColor w-[105px] s:w-[120px] m:w-[130px] l:w-[150px] py-[13px] text-[12px] s:text-[14px] m:text-[15px] l:text-[16px] relative text-white text-center font-[600] block boxShd">
               # 연중무휴 YES
             </button>
           </div>
-          <div className="italic font-[400] text-[40px] bg-white">
+          <div className="italic font-[400] text-[20px] x:text-[25px] m:text-[30px] l:text-[40px] bg-white">
             "This is Differentiated Marketing"
           </div>
-          <div id="maintxt" className="overflow-hidden">
-            <div className="text-[80px] font-[200] bg-white w-fit">
+          <div id="maintxt" className="overflow-hidden leading-[1.7] x:leading-[1.5] text-[33px] s:text-[38px] x:text-[45px] m:text-[65px] l:text-[80px]">
+            <h1 className="font-[200] bg-white w-fit">
               <span className="font-[500] z-[3] relative">바이럴토스</span>와
               함께
-            </div>
-            <div id="container1" className="text-[80px] font-[200] bg-white overflow-hidden">
+            </h1>
+            <h1 id="container1" className="font-[200] bg-white overflow-hidden">
               <span
                 id="sec-text"
                 className={
-                  "textColor font-[500] relative w-[207.43px] inline-block"
+                  "textColor font-[500] relative w-[85px] s:w-[100px] x:w-[120px] m:w-[170px] l:w-[207.43px] inline-block"
                 }
                 // aria-label={word}
               >
@@ -67,14 +67,18 @@ const MainMenu = (props: Props) => {
                 {/* {word ? word : "바이럴"} */}
               </span>
               <span className="z-[2] relative "> 마케팅을 시작하다</span>
-            </div>
+            </h1>
           </div>
 
-          <img
+          <div className="absolute top-[66%] s:top-[63%] m:top-[57%] left-[0%] w-[150px] s:w-[180px] x:w-[200px] m:w-[290px] l:w-[350px] h-auto z-[1] aspect-[1000/146]">
+            <Image src={under} alt="under" fill objectFit="cover"/>
+          </div>
+
+          {/* <img
             src="/images/under.png"
             alt="sdf"
             className="absolute top-[57%] left-[0%] w-[350px] h-auto z-[1]"
-          />
+          /> */}
         </div>
         <img
           src="/images/blend1.png"

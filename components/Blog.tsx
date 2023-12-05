@@ -14,13 +14,14 @@ const Blog = (props: SnsProps) => {
     <section className="section">
       <div className="container">
         <h2 className="section-title">
-          <span className="text-green-500">네이버</span> 브랜드 블로그
+          전문직 브랜드 <span className="text-green-500">블로그</span>
         </h2>
         <p className="section-text text-[21px]">
-          위치 및 매장 홍보에 효과적인 네이버 지도 플레이스 마케팅입니다.
+          의사, 변호사, 세무사 등 전문직종을 위한 브랜드 블로그입니다.
           <br />
-          어뷰징이나 편법 없이 네이버 플레이스를 최적화 시켜 노출과 전환이 잘
-          되게 만듭니다.
+          브랜드 블로그를 활용해서 고객이 원하는 키 포인트를 잡아줍니다.
+          고객이 원하는 정보, 필요한 내용을 중점적으로 적어서 
+          뿐만 아니라 SNS광고를 통해 
         </p>
         <div className="flex justify-center">
           <div className="w-full mx-auto">

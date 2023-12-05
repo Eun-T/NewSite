@@ -60,7 +60,7 @@ const BlogSlider = (props: Props) => {
 
   return (
     <>
-      <div id="blogslider" className="w-full py-[75px]">
+      <div id="blogslider" className="w-full ">
         {/* id="blogslider" */}
         <div id="bsc">
           {/* id="bsc" */}
@@ -87,7 +87,7 @@ const BlogSlider = (props: Props) => {
           ))}
         </div>
       </div>
-      <BlogEx />
+      {/* <BlogEx /> */}
     </>
 
     // <div

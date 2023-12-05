@@ -43,12 +43,12 @@ const SmartPlace = (props: SmartPlaceProps) => {
             <span className="text-green-500 block s:inline">네이버 </span>
             스마트플레이스
           </h2>
-          <p className="section-text text-[21px]">
+          <p className="section-text">
             네이버에서 제공하는 서비스로는 가게와 업체의 상세한 정보를 확인할 수
-            있습니다.
-            <br />
-            위치, 사진, 휴무일 등 다양한 정보를 기입하여 이용자에게 제공합니다.
-            <br />
+            있습니다.&nbsp;
+            <br className="hidden x:block"/>
+            위치, 사진, 휴무일 등 다양한 정보를 기입하여 이용자에게 제공합니다.&nbsp;
+            <br className="hidden x:block"/>
             국내에서 매우 널리 사용되며, 약 200만 개의 플레이스 업체가 등록되어
             있습니다.
           </p>
