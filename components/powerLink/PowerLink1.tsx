@@ -23,20 +23,20 @@ const slides = [
 
 const PowerLink1 = (props: Props) => {
   return (
-    <div className="flex items-center justify-between">
-      <div className="order-3">
+    <div className="flex m:flex-row flex-col m:items-center l:justify-between">
+      <div className="order-3 w-[85%] self-center m:self-auto m:w-1/2 l:w-[600px] aspect-square">
         <HorizonSlide slides={slides} parentWidth={600} />
       </div>
-      <div className="order-2">
+      <div className="order-2 m:w-1/2 l:w-auto mb-[20px] m:mb-0">
         <p
-          className="font-[300] text-[36px]"
+          className="font-[300] text-[24px] x:text-[26px] m:text-[30px] l:text-[36px]"
           data-aos="fade-up"
           data-aos-duration="600"
           data-aos-delay="60"
           data-aos-once="true"
           data-aos-easing="ease-in-out"
         >
-          <span className="block textColor text-[24px] font-[500]">
+          <span className="block textColor text-[18px] x:text-[20px] m:text-[22px] l:text-[24px] font-[500]">
             걱정하지 마세요
           </span>
           세팅을 위한 5가지의 관문

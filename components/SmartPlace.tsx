@@ -30,7 +30,7 @@ const SmartPlace = (props: SmartPlaceProps) => {
   }, []);
 
   return (
-    <section className="section">
+    <section className="section" id="smartplace">
       <div className="container">
         <div
           data-aos="fade-up"

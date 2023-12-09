@@ -24,7 +24,7 @@ const LineBar = (props: LineBarProps) => {
         data-aos-once="false"
         data-aos-easing="ease-in-out"
       >
-        <Image src={linebar} alt="linebar" objectFit="cover" fill />
+        <Image src={linebar} alt="linebar" className="w-full h-full object-cover" />
       </div>
     </section>
   );

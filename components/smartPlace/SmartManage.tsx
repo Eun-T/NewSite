@@ -27,7 +27,7 @@ const SmartManage = (props: Props) => {
           권장/필수사항 모두 꼼꼼히 기입해야 해요.
         </h3>
         <div className="relative w-[230px] m:w-[250px] l:w-[280px] max-w-[800px] aspect-[300/613] rounded-[50px] shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
-          <Image src={iphone9} alt="ipad" objectFit="cover" fill />
+          <Image src={iphone9} alt="ipad" className="w-full h-full object-cover" />
         </div>
       </div>
 
@@ -71,7 +71,7 @@ const SmartManage = (props: Props) => {
           선택이 아닌 필수사항이죠.
         </h3>
         <div className="relative w-[230px] m:w-[250px] l:w-[280px] max-w-[800px] aspect-[300/613] rounded-[50px] shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
-          <Image src={iphone10} alt="ipad" objectFit="cover" fill />
+          <Image src={iphone10} alt="ipad" className="w-full h-full object-cover" />
         </div>
       </div>
     </div>

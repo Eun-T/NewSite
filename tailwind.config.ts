@@ -74,14 +74,16 @@ const config: Config = {
         mobileNavbar: "mobileNavbar .3s ease",
         textShow: "textShow .5s ease",
         buttonShow: "buttonShow 2s ease",
-        imageUp: "imageUp .5s ease",
+        imageUp: "imageUp 2s ease infinite",
         imageDown: "imageDown .5s ease",
         barUp: "barUp .5s ease",
         // fadeIn: "fadeIn .5s ease"
       },
     },
   },
-  plugins: [],
+  plugins: [
+    
+  ],
   darkMode: "class",
 };
 export default config;

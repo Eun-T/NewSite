@@ -48,36 +48,37 @@ const circles = [
 
 const BlogProcess = (props: Props) => {
   return (
-      <div className="relative max-w-[1240px] flex justify-center items-center flex-wrap gap-[30px] py-[80px]">
-        {circles.map((circle) => (
-          <div className="flex flex-col items-center">
-            <div
-              id="progress"
-              className={
-                circle.back +
-                " relative w-[220px] h-[220px] rounded-[50%] mb-[15px]  before:content-[''] before:block before:h-full before:ml-[50%] before:origin-left  after:content-[''] after:absolute after:inset-[7px] after:rounded-[50%] after:bg-[#fff] " +
-                circle.progress
-              }
-            >
-              <div className="absolute top-[55%] gap-2 left-[50%] -translate-x-[50%] -translate-y-[50%] z-10 text-black flex flex-col items-center">
-                <Image
-                  src={circle.image}
-                  alt={circle.title}
-                  objectFit="cover"
-                  width={70}
-                  height={70}
-                />
-                <h3 className="text-[40px] font-[600]">{circle.title}</h3>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-[#22c55e] text-[24px] font-[600]">
-                {circle.main}
-              </h3>
+    <div className="relative max-w-[1240px] flex justify-center items-center flex-wrap gap-[30px] py-[80px]">
+      {circles.map((circle) => (
+        <div className="flex flex-col items-center">
+          <div
+            id="progress"
+            className={
+              circle.back +
+              " relative w-[220px] h-[220px] rounded-[50%] mb-[15px]  before:content-[''] before:block before:h-full before:ml-[50%] before:origin-left  after:content-[''] after:absolute after:inset-[7px] after:rounded-[50%] after:bg-[#fff] " +
+              circle.progress
+            }
+          >
+            <div className="absolute top-[55%] gap-2 left-[50%] -translate-x-[50%] -translate-y-[50%] z-10 text-black flex flex-col items-center">
+              <Image
+                src={circle.image}
+                alt={circle.title}
+                fill
+                className="object-cover"
+                width={70}
+                height={70}
+              />
+              <h3 className="text-[40px] font-[600]">{circle.title}</h3>
             </div>
           </div>
-        ))}
-      </div>
+          <div>
+            <h3 className="text-[#22c55e] text-[24px] font-[600]">
+              {circle.main}
+            </h3>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 

@@ -42,7 +42,9 @@ const Sns = (props: SnsProps) => {
   return (
     <section className="relative w-full px-[4%] py-[50px]">
       <div className="max-w-[1240px] mx-auto w-full relative">
-        <h2 className="text-[40px] font-[600] mb-[15px]"><span className="text-[#3b5998]">SNS</span> 마케팅</h2>
+        <h2 className="text-[40px] font-[600] mb-[15px]">
+          <span className="text-[#3b5998]">SNS</span> 마케팅
+        </h2>
 
         <div className="flex flex-col">
           <div className="flex items-center mb-[20px]">
@@ -80,10 +82,16 @@ const Sns = (props: SnsProps) => {
                       <Image
                         src={image.src}
                         alt={image.alt}
-                        objectFit="cover"
                         fill
+                        className="object-cover"
                       />
-                      <div className={(image.id === slideNumber ? "" : " w-full h-full bg-black opacity-50 hover:opacity-0 transition duration-200")}></div>
+                      <div
+                        className={
+                          image.id === slideNumber
+                            ? ""
+                            : " w-full h-full bg-black opacity-50 hover:opacity-0 transition duration-200"
+                        }
+                      ></div>
                     </>
                   </div>
                 ))}
@@ -95,8 +103,8 @@ const Sns = (props: SnsProps) => {
                 <Image
                   src={images[slideNumber - 1].src}
                   alt={images[slideNumber - 1].alt}
-                  objectFit="cover"
                   fill
+                  className="object-cover"
                 />
               ) : (
                 ""

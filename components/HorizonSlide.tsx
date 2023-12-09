@@ -10,7 +10,7 @@ type horizonSlideProps = {
 
 const slideStyles = {
   width: "100%",
-  height: "600px",
+  height: "100%",
   borderRadius: "0px",
   backgroundSize: "contain",
   backgroundPosition: "center",
@@ -23,6 +23,9 @@ const slidesContainerStyles = {
 };
 
 const HorizonSlide = ({ slides, parentWidth }: horizonSlideProps) => {
+  const widthRef = useRef<HTMLDivElement>(null);
+  let wid = widthRef.current?.offsetWidth;
+
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const goToPrevious = () => {
@@ -41,16 +44,18 @@ const HorizonSlide = ({ slides, parentWidth }: horizonSlideProps) => {
   const getSlideStylesWithBackground = (slideIndex: number) => ({
     ...slideStyles,
     // backgroundImage: `url(${slides[slideIndex].url})`,
-    width: `${parentWidth}px`,
+    // width: `${parentWidth}px`,
   });
 
-  const getSlidesContainerStylesWithWidth = () => ({
+  const getSlidesContainerStylesWithWidth = (wid: number) => ({
     ...slidesContainerStyles,
-    width: parentWidth * slides.length,
-    transform: `translateX(${-(currentIndex * parentWidth)}px)`,
+    // width: parentWidth * slides.length,
+    width: "100%",
+    transform: `translateX(${-(currentIndex * Number(wid))}px)`,
   });
 
   useEffect(() => {
+    // wid = widthRef.current?.offsetWidth
     if (timerRef.current) {
       clearTimeout(timerRef.current);
     }
@@ -62,7 +67,7 @@ const HorizonSlide = ({ slides, parentWidth }: horizonSlideProps) => {
   }, [goToNext]);
 
   return (
-    <div className="relative w-[600px] h-[600px]">
+    <div className="relative w-full aspect-square" ref={widthRef}>
       {/* <div>
         <div onClick={goToPrevious} className="absolute top-[50%] -translate-y-[50%] left-[32px] text-[45px] z-[10] cursor-pointer text-white">
           ❰
@@ -72,13 +77,14 @@ const HorizonSlide = ({ slides, parentWidth }: horizonSlideProps) => {
         </div>
       </div> */}
       <div className="overflow-hidden h-full">
-        <div style={getSlidesContainerStylesWithWidth()}>
+        <div style={getSlidesContainerStylesWithWidth(wid as number)}>
           {slides.map((slide, slideIndex) => (
             // <div
             //   key={slideIndex}
             //   style={getSlideStylesWithBackground(slideIndex)}
             // ></div>
             <img
+              key={slideIndex}
               src={slides[slideIndex].url}
               alt={slide.title}
               style={getSlideStylesWithBackground(slideIndex)}
@@ -89,11 +95,12 @@ const HorizonSlide = ({ slides, parentWidth }: horizonSlideProps) => {
       <div className="flex justify-center">
         {slides.map((slide, slideIndex) => (
           <div
+            key={slideIndex}
             id={String(slideIndex)}
             className={
-              (currentIndex === Number(slideIndex) ? "bg-[#1bbc1b]" : "") + " mx-[3px] cursor-pointer w-[10px] h-[10px] rounded-[50%] bg-[#8f8d8d]"
+              (currentIndex === Number(slideIndex) ? "bgColor" : "bg-[#8f8d8d]") +
+              " mx-[3px] cursor-pointer w-[10px] h-[10px] rounded-[50%]"
             }
-            key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
           ></div>
         ))}

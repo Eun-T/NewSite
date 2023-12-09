@@ -5,7 +5,7 @@ import law from "../../public/images/law.png";
 import schoolbully from "../../public/images/schoolbully.png";
 import megacoffee from "../../public/images/megacoffee.png";
 import Image from "next/image";
-import BlogEx from "./BlogEx";
+// import BlogEx from "./BlogEx";
 
 type Props = {};
 
@@ -65,23 +65,21 @@ const BlogSlider = (props: Props) => {
         <div id="bsc">
           {/* id="bsc" */}
           {images.map((img) => (
-            <div id={img.id}>
+            <div key={img.id} className='relative top-[1px] w-[320px] x:w-[340px] m:w-[380px] l:w-[410px] aspect-[410/547] flex items-center pt-[24px] px-[32px] x:px-[40px] m:px-[48px] pb-0 bg-[#eee] rounded-[20px] overflow-hidden'>
               <Image
                 src={img.src}
                 alt={img.alt}
-                objectFit="cover"
-                className="w-full h-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
+                className="w-full h-full object-cover shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
               />
             </div>
           ))}
 
           {images.map((img) => (
-            <div id={img.id}>
+            <div key={img.id} className='relative top-[1px] w-[320px] x:w-[340px] m:w-[380px] l:w-[410px] aspect-[410/547] flex items-center pt-[24px] px-[32px] x:px-[40px] m:px-[48px] pb-0 bg-[#eee] rounded-[20px] overflow-hidden'>
               <Image
                 src={img.src}
                 alt={img.alt}
-                objectFit="cover"
-                className="w-full h-full shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
+                className="w-full h-full object-cover shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]"
               />
             </div>
           ))}

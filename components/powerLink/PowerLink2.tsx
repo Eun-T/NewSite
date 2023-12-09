@@ -51,12 +51,13 @@ const PowerLink2 = (props: Props) => {
 
   return (
     <section className="relative bg-[url('/images/computer.jpg')] bg-fixed bg-no-repeat bg-cover before:content-[''] before:bg-black before:absolute before:inset-0  before:bg-bottom before:bg-no-repeat before:bg-cover before:opacity-30 section mb-[150px]">
-      <div className="container relative">
+      <div className="container px-[24px] relative">
         {/* <h3 className="text-white text-center text-[40px] font-[500] mb-[0px]">검색광고 대표 상품 소개</h3> */}
-        <h4 className="text-white text-center text-[40px] font-[500] mb-[40px]">
-          다른 검색광고 상품들도 작업이 가능합니다.
+        <h4 className="text-white text-center text-[28px] x:text-[32px] m:text-[36px] l:text-[40px] font-[500] mb-[40px]">
+          다른 검색광고 상품들도{" "}<br className="block m:hidden"/>작업이 가능합니다.
         </h4>
-        <div className="flex gap-[30px]">
+        <div className="grid grid-cols-2 l:flex justify-between justify-items-center">
+          {/* <div className="flex justify-between"> */}
           {searches.map((search) => (
             <div
               className="w-[25%] flex flex-col items-center"
@@ -69,30 +70,28 @@ const PowerLink2 = (props: Props) => {
               data-aos-once="true"
               data-aos-easing="ease-in-out"
             >
-              <p className="font-[400] text-[24px] text-white mb-[30px]">
+              <p className="font-[400] text[22px] l:text-[24px] text-white mb-[30px]">
                 {search.title}
               </p>
               <div className="relative border-[3px] border-green-500 border-solid">
-                <div className="w-[230px] relative aspect-[230/336]">
+                <div className="w-[140px] s:w-[160px] x:w-[180px] m:w-[200px] relative aspect-[230/336]">
                   <Image
                     src={search.backImage}
                     alt="soccerBackground"
-                    objectFit="cover"
-                    fill
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div
                   className={
-                    "w-[255px] absolute h-auto top-[75px] left-[50%] -translate-x-[50%] z-2 border-[3px] border-green-500 border-solid transition duration-300 ease-in-out shadow-[0_6px_10px_rgba(0,0,0,.15)] " +
+                    "w-[160px] s:w-[180px] x:w-[205px] m:w-[225px] absolute h-auto top-[45px] x:top-[75px] left-[50%] -translate-x-[50%] z-2 border-[3px] border-green-500 border-solid transition duration-300 ease-in-out shadow-[0_6px_10px_rgba(0,0,0,.15)] " +
                     (isHovered ? "scale-105 border-blue-500" : "")
                   }
                 >
                   <Image
                     src={search.frontImage}
                     alt="soccerFront"
-                    objectFit="cover"
                     // fill
-                    className="w-full h-auto"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>

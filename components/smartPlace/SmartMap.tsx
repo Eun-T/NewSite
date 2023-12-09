@@ -23,8 +23,7 @@ const SmartMap = (props: Props) => {
         <Image
           src={smartplaceIpad}
           alt="smartplaceIpad"
-          objectFit="cover"
-          fill
+          fill className="object-cover"
         />
       </div>
       {/* <div className="w-[33.3%] text-gray-400 font-[600] text-[21px] break-keep leading-relaxed"> */}

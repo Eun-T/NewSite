@@ -55,8 +55,7 @@ const SmartOtherService = (props: Props) => {
                 <Image
                   src={other.image}
                   alt={other.alt}
-                  objectFit="contain"
-                  fill
+                  fill className="object-contain"
                 />
               </div>
               <div className="relative w-[50%] h-full flex items-center justify-center">

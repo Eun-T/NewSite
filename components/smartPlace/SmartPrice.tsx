@@ -78,8 +78,7 @@ const SmartPrice = (props: Props) => {
                   <Image
                     src={list.img}
                     alt={list.alt}
-                    fill
-                    objectFit="cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
@@ -158,8 +157,8 @@ const SmartPrice = (props: Props) => {
               </ul>
 
               <a
-                href="/"
-                className="block w-[150px] h-[50px] leading-[50px] text-center rounded-[50px] mt-[50px] mx-auto border-[#1bbc1b] border-[1px]"
+                href="/inquiry"
+                className="flex justify-center items-center w-[125px] h-[45px] m:w-[150px] m:h-[50px] leading-[50px] text-center rounded-[50px] mt-[50px] mx-auto border-[#1bbc1b] border-[1px] hover:bg-[#1bbc1b] hover:text-white transition duration-300"
               >
                 상담받기
               </a>
