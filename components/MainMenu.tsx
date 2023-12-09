@@ -47,7 +47,7 @@ const MainMenu = (props: Props) => {
             </button>
           </div>
           <div className="italic font-[400] text-[20px] x:text-[25px] m:text-[30px] l:text-[40px] bg-white">
-            "This is Differentiated Marketing"
+            &ldquo;This is Differentiated Marketing&rdquo;
           </div>
           <div
             id="maintxt"

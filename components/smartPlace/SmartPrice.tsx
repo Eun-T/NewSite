@@ -61,7 +61,7 @@ const SmartPrice = (props: Props) => {
           <div className="w-full x:w-[80%] l:w-[40%] h-full flex justify-end flex-col gap-[10px]">
             {lists.map((list) => (
               <div
-                id={list.id}
+                key={list.id}
                 className="w-full h-[160px] flex bg-white rounded-[20px] items-center justify-between px-[37px] gap-[20px]"
                 data-aos="fade-right"
                 data-aos-duration="600"

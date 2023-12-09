@@ -28,8 +28,8 @@ const PowerLinkFood = (props: Props) => {
           >
             네이버는 키워드에 따라 광고를 보여줍니다.
             <br />
-            예를 들어, <span className="font-[600]">'모란역맛집'</span>의
-            경우에는 <span className="font-[600]">'모란역맛집' </span>이라는{" "}
+            예를 들어, <span className="font-[600]">&lsquo;모란역맛집&rsquo;</span>의
+            경우에는 <span className="font-[600]">&lsquo;모란역맛집&rsquo; </span>이라는{" "}
             <br className="hidden l:block"/>
             키워드를 기입해 두셔야합니다.
           </p>

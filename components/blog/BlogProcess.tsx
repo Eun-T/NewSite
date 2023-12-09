@@ -49,8 +49,8 @@ const circles = [
 const BlogProcess = (props: Props) => {
   return (
     <div className="relative max-w-[1240px] flex justify-center items-center flex-wrap gap-[30px] py-[80px]">
-      {circles.map((circle) => (
-        <div className="flex flex-col items-center">
+      {circles.map((circle,index) => (
+        <div className="flex flex-col items-center" key={index}>
           <div
             id="progress"
             className={

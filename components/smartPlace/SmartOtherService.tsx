@@ -48,6 +48,7 @@ const SmartOtherService = (props: Props) => {
         <div className="flex flex-row flex-wrap gap-[20px] justify-center">
           {others.map((other) => (
             <div
+              key={other.id}
               id={other.id}
               className="flex flex-row w-[95%]  h-[120px] bg-[#f4f5f7] rounded-[8px] p-[20px]"
             >
@@ -55,7 +56,8 @@ const SmartOtherService = (props: Props) => {
                 <Image
                   src={other.image}
                   alt={other.alt}
-                  fill className="object-contain"
+                  fill
+                  className="object-contain"
                 />
               </div>
               <div className="relative w-[50%] h-full flex items-center justify-center">

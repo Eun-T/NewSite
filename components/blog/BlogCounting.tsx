@@ -41,7 +41,7 @@ const BlogCounting = (props: Props) => {
       <div>
         <ul className="flex gap-[30px] x:gap-[15px] m:gap-[30px] items-center text-center flex-wrap justify-evenly x:flex-nowrap">
           {lists.map((list) => (
-            <li className="flex flex-col gap-[10px] w-[33.3%]">
+            <li className="flex flex-col gap-[10px] w-[33.3%]" key={list.id}>
               <h3 className="text-[28px] x:text-[32px] m:text-[36px] l:text-[40px] text-center textColor">{list.num}</h3>
               <h4 className="text-[16px] m:text-[19px] l:text-[22px] font-[500]">{list.title}</h4>
               <p className="text-[12px] m:text-[14px] text-[#3b4589]">
