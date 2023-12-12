@@ -19,6 +19,12 @@
   }
 }
 
+/* @media (max-width: 768px) {
+  #smartpl[data-aos-offset] {
+    display: none;
+  }
+} */
+
 body {
   background-color: #fff;
 }

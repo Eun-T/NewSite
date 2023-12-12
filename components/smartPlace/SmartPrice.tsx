@@ -82,7 +82,9 @@ const SmartPrice = (props: Props) => {
                   />
                 </div>
                 <div>
-                  <p className="text-[20px] s:text-[22px] x:text-[26px] l:text-[30px] text-end">{list.title}</p>
+                  <p className="text-[20px] s:text-[22px] x:text-[26px] l:text-[30px] text-end">
+                    {list.title}
+                  </p>
                   <p className="text-[28px] s:text-[30px] x:text-[36px] l:text-[40px] font-[700] text-end">
                     {list.price}
                   </p>
@@ -92,6 +94,7 @@ const SmartPrice = (props: Props) => {
           </div>
 
           <div
+            id="smartpl"
             className="w-full x:w-[80%] l:w-[35%]"
             data-aos="fade-left"
             data-aos-duration="600"

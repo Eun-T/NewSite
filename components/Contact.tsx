@@ -7,7 +7,7 @@ type Props = {};
 
 const Contact = (props: Props) => {
   return (
-    <section className="section bg-[url('/images/aurora.jpg')] bg-no-repeat bg-center bg-cover bg-fixed">
+    <section className="section bg-[url('/images/aurora.jpg')] bg-no-repeat bg-center bg-cover m:bg-fixed">
       <div className="container flex m:items-center m:justify-between py-[75px] m:py-[100px] m:flex-row flex-col gap-[20px] m:gap-0">
         <div className="text-white">
           <h3 className="uppercase text-[52px] m:text-[60px]">why?</h3>

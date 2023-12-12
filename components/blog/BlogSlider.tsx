@@ -4,6 +4,10 @@ import React, { useEffect } from 'react'
 import law from "../../public/images/law.png";
 import schoolbully from "../../public/images/schoolbully.png";
 import megacoffee from "../../public/images/megacoffee.png";
+import blog4 from "../../public/images/blog4.png";
+import blog5 from "../../public/images/blog5.png";
+import blog6 from "../../public/images/blog6.png";
+import blog7 from "../../public/images/blog7.png";
 import Image from "next/image";
 // import BlogEx from "./BlogEx";
 
@@ -28,23 +32,23 @@ const BlogSlider = (props: Props) => {
     },
     {
       id: "3",
-      src: law,
-      alt: "law",
+      src: blog4,
+      alt: "blog4",
     },
     {
       id: "4",
-      src: law,
-      alt: "law",
+      src: blog5,
+      alt: "blog5",
     },
     {
       id: "5",
-      src: law,
-      alt: "law",
+      src: blog6,
+      alt: "blog6",
     },
     {
       id: "6",
-      src: law,
-      alt: "law",
+      src: blog7,
+      alt: "blog7",
     },
     {
       id: "7",

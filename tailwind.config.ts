@@ -48,8 +48,8 @@ const config: Config = {
           "100%": { transform: "translateY(0)" },
         },
         imageUp: {
-          "0%,100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
+          "0%,100%": { transform: "translateY(0px) translateX(-50%)" },
+          "50%": { transform: "translateY(-20px) translateX(-50%)" },
         },
         imageDown: {
           "0%,100%": { transform: "translateY(-20px) translateX(0px) rotate(135deg)" },
